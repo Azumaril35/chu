@@ -1,0 +1,121 @@
+/* Style global */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #171b42;
+  color: #cbced8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 700px;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #cbced8;
+  margin-bottom: 15px;
+}
+
+/* Style pour la liste des événements */
+.event-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-list li {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.event-list li:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.event-name {
+  font-weight: bold;
+  color: #cbced8;
+  font-size: 1.2rem;
+}
+
+.event-time {
+  font-size: 0.9rem;
+  color: #cbced8;
+}
+
+/* Style pour le formulaire */
+.event-form {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.event-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.event-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.errorlist,
+.error {
+  color: rgb(247, 101, 101);
+}
+
+.success {
+  color: #00ff15;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #00d4ff;
+  color: #171b42;
+}
+
+.btn-primary:hover {
+  background-color: #00a9ca;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Événements en conflit</h1>
+
+    {% if conflicts %}
+    <!-- Section Liste des Événements -->
+    <div class="event-list">
+        <h2>Liste des Événements en conflit</h2>
+        <ul id="event-items">
+            {% for event, conflict in conflicts %}
+            <li>
+                <span class="event-name">{{event.name}} - {{conflict.name}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <p>Aucun événement en conflit.</p>
+    <a class="btn btn-primary" href="{% url 'list_events_view' %}">Voir les événements</a>
+    {% endif %}
+</div>
+
+{% endblock %}

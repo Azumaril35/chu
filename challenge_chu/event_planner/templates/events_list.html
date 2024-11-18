@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Événements</h1>
+
+    <!-- Section Liste des Événements -->
+    {% if events %}
+    <div class="event-list">
+        <h2>Liste des Événements</h2>
+        <ul id="event-items">
+            {% for event in events %}
+            <li>
+                <span class="event-name">{{event.name}}</span>
+                <span class="event-time">Début : {{event.start_time}} - Fin : {{event.end_time}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <a class="btn btn-primary" href="{% url 'list_conflicts_view' %}">Voir les conflits</a>
+    </div>
+    {% endif %}
+
+    <!-- Formulaire pour ajouter un événement -->
+    <div class="event-form">
+        <h2>Ajouter un Nouvel Événement</h2>
+        <form id="add-event-form" method="post">
+            {% csrf_token %}
+            <!-- <label for="name">Nom de l'événement :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="start_time">Début :</label>
+            <input type="datetime-local" id="start_time" name="start_time" required>
+
+            <label for="end_time">Fin :</label>
+            <input type="datetime-local" id="end_time" name="end_time" required> -->
+
+            {{ form }}
+
+            <button class="btn btn-primary" type="submit">Ajouter l'événement</button>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock %}
